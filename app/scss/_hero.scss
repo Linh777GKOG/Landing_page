@@ -1,0 +1,25 @@
+s (73 sloc)  1.8 KB
+
+.hero {
+  background-color: $veryLightGray;
+
+  .container {
+
+    @include breakpoint-up(large){    
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+
+    @include breakpoint-up(medium){
+      min-height: 25rem;
+      background-position: center 70%;
+    }
